@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: rredis_production
-  username: rredis
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   password: <%= ENV["RREDIS_DATABASE_PASSWORD"] %>
